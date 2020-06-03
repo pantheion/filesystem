@@ -1,0 +1,16 @@
+{
+    "name": "pantheion/filesystem",
+    "description": "Filesystem",
+    "authors": [
+        {
+            "name": "Pedro Miguel",
+            "email": "pedro.aos19@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Pantheion\\Filesystem\\": ""
+        }
+    }
+}
