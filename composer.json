@@ -12,5 +12,6 @@
         "psr-4": {
             "Pantheion\\Filesystem\\": ""
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
