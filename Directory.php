@@ -2,7 +2,7 @@
 
 namespace Pantheion\Filesystem;
 
-class Folder
+class Directory
 {
     /**
      * Undocumented function
