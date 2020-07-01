@@ -4,7 +4,7 @@ namespace Pantheion\Filesystem\Exception;
 
 use Exception;
 
-class FileExistsException extends Exception
+class FileAlreadyExistsException extends Exception
 {
     public function __toString()
     {
