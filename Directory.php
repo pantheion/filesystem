@@ -27,7 +27,7 @@ class Directory extends Element
     {
         $pathinfo = pathinfo($path);
 
-        $this->path = str_replace(__DIR__ . DIRECTORY_SEPARATOR, "", $path);
+        $this->path = str_replace($_SERVER["DOCUMENT_ROOT"] . DIRECTORY_SEPARATOR, "", $path);
         $this->name = $pathinfo["basename"];
         $this->fullpath = $path;
     }
@@ -132,7 +132,7 @@ class Directory extends Element
      */
     public static function exists($path)
     {
-        if (strpos($path, __DIR__) !== false) return is_dir($path);
+        if (strpos($path, $_SERVER["DOCUMENT_ROOT"]) !== false) return is_dir($path);
 
         return is_dir(Directory::fullpath($path));
     }

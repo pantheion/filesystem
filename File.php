@@ -29,7 +29,7 @@ class File extends Element
     {
         $pathinfo = pathinfo($path);
 
-        $this->path = str_replace(__DIR__ . DIRECTORY_SEPARATOR, "", $path);
+        $this->path = str_replace($_SERVER["DOCUMENT_ROOT"] . DIRECTORY_SEPARATOR, "", $path);
         $this->extension = $pathinfo["extension"];
         $this->name = $pathinfo["filename"];
         $this->fullname = $this->name . "." . $this->extension;
@@ -189,7 +189,7 @@ class File extends Element
      */
     public static function exists(string $path)
     {  
-        if(strpos($path, __DIR__) !== false) return file_exists($path);
+        if(strpos($path, $_SERVER["DOCUMENT_ROOT"]) !== false) return file_exists($path);
 
         return file_exists(File::fullpath($path));
     }
